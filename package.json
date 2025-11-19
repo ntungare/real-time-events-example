@@ -1,0 +1,21 @@
+{
+  "name": "big-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "pnpm run clean:ui-server && pnpm run clean:ws-node-server",
+    "start:dev": "concurrently --prefixColors auto pnpm:start:dev:ui-server pnpm:start:dev:ws-node-server",
+    "clean:ui-server": "pnpm run --filter ui-server clean",
+    "start:dev:ui-server": "pnpm run --filter ui-server start:dev",
+    "clean:ws-node-server": "pnpm run --filter ws-node-server clean",
+    "start:dev:ws-node-server": "pnpm run --filter ws-node-server start:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.3",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
